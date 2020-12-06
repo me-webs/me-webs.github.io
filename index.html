@@ -540,11 +540,11 @@
             <div class="col-md-6 col-lg-6 col-sm-12">
               <div class="contact-block">
                 <h2>Formulario de Contacto</h2>
-                <form id="contactForm">
+                <form id="contactForm" action="send.php" method="post" enctype="multipart/form-data" name="formulario" target="_self" id="formulario">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required data-error="Please enter your name">
+                        <input type="text" class="form-control" id="name" name="nombre" type="text" id="nombre" placeholder="Nombre" required data-error="Please enter your name">
                         <div class="help-block with-errors"></div>
                       </div>                                 
                     </div>
@@ -556,17 +556,19 @@
                     </div>
                      <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" placeholder="Asunto" id="msg_subject" class="form-control" required data-error="Por favor ingrese asunto">
+                        <input type="text" placeholder="Asunto" name="ciudad" type="text" id="ciudad" id="msg_subject" class="form-control" required data-error="Por favor ingrese asunto">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group"> 
-                        <textarea class="form-control" id="message" placeholder="Su mensaje" rows="5" data-error="Write your message" required></textarea>
+                        <textarea class="form-control" id="message" name="mensaje" id="mensaje" placeholder="Su mensaje" rows="5" data-error="Write your message" required></textarea>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="submit-button">
                         <button class="btn btn-common" id="submit" type="submit">Enviar Mensaje</button>
+                        <input class="btn btn-common" name="enviar" type="submit" id="enviar" value="ENVIAR" />
+
                         <div id="msgSubmit" class="h3 text-center hidden"></div> 
                         <div class="clearfix"></div> 
                       </div>
@@ -610,6 +612,7 @@
         </div>
       </div>   
     </section>
+
     <!-- Contact Section End -->
 
     <!-- Footer Section Start -->
